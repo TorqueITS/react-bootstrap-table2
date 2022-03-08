@@ -102,7 +102,7 @@ class StateProvider extends React.Component {
     const { custom } = nextProps.pagination.options;
 
     // user should align the page when the page is not fit to the data size when remote enable
-    if (this.isRemotePagination() || custom) {
+    if (custom || this.isRemotePagination())
       if (typeof nextProps.pagination.options.page !== 'undefined') {
         this.currPage = nextProps.pagination.options.page;
       }
